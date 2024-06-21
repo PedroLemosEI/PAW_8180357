@@ -22,6 +22,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// Logo
+app.get('/api/logo', (req, res) => {
+  const logoImageUrl = '/images/logo.png'
+  res.json({logoImageUrl})
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -37,5 +43,15 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const mongoose = require('mongoose');
+
+//mongoDB Atlas Connection String
+const url = 'mongodb+srv://user:user@pawtp.rqq7yfs.mongodb.net/';
+
+//Connect to mongoDB Atlas
+mongoose.connect(url)
+.then(() => console.log('Database connected!'))
+.catch(err => console.error('Error connecting to database:', err));
 
 module.exports = app;
