@@ -7,12 +7,16 @@
 </head>
 <body>
   <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <img src = "favicon.ico" class="toolbar-img">
+    <img src = "favicon.ico" class="toolbar-img clickable">
     <span>Pet Resort</span>
     <span class="spacer"></span>
+    <ng-container>
+      <button mat-fab extended>Login</button>
+    </ng-container>
+    <ng-container>
+      <button mat-fab extended>Register</button>
+    </ng-container>
+
   </mat-toolbar>
 </body>
 </html>

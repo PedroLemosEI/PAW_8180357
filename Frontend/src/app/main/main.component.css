@@ -13,8 +13,12 @@ body, html {
   width: 50%;
 }
 
+.logo-img{
+  max-height: 20%;
+}
+
 .left {
-  background-color: dimgray;
+  background-color: #658fb5;
   color: white;
   display: flex;
   justify-content: center;
@@ -24,13 +28,34 @@ body, html {
 
 .right {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   align-items: center;
-  background-color: dimgray; /* Fallback color in case image doesn't load */
+  background-color: #658fb5; /* Fallback color in case image doesn't load */
 }
 
 .right img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 50%;
+  border: 5px solid #1f1f1f; /* Ajuste a cor e a espessura da borda conforme necessário */
+  padding: 10px; /* Adiciona um espaço interno entre a imagem e a borda */
+  border-radius: 10px; /* Adiciona cantos arredondados à borda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra à imagem */
   object-fit: fill;
+}
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: smaller;
+  max-width: 80%;
+  max-height: 100%;
+  color: white;
+  display: flex;
+}
+
+.intro h1{
+  font-size: 20px;
 }

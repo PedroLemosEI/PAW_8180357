@@ -14,3 +14,30 @@
   margin-left: 16px;
   margin-right: 8px;
 }
+
+button,
+.mat-fab{
+  background-color: #87bcee;
+  opacity: 0.80;
+  color: white;
+  margin-right: 8px;
+  max-height: 70%;
+}
+
+
+
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.greeting {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.clickable {
+  cursor: pointer;
+}
